@@ -4,12 +4,12 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html lang="en">
 	<head>
-		<title>Shiv Bhanu Singh</title>
+		<title>Instacart Customer Analysis — Shiv Bhanu Singh</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="shortcut icon" href="images/S_Title.jpeg" type="image/x-icon"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" href="images/S_Title.jpeg" type="image/x-icon"/>
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
@@ -54,7 +54,7 @@
 								<li><strong> Products</strong>: The dataset includes <strong>~50k</strong> products categorized by aisle and department.</li>
 								<li><strong> User Information</strong>: Additional user data includes order day, order hour, days since last order, and reorder flags.</li>
 							</ul>
-							<H2>Process</H2>
+							<h2>Process</h2>
 							<p>
 								The process included uploading multiple files into Python, forming a dictionary of dataframes, merging them into a unified dataset. These dataframes were then imported into a SQL server for querying and exploring insights. Extracted valuable information was exported and loaded into Tableau for visualization purposes.
 							</p>
@@ -69,18 +69,18 @@
 						</main>
 						<p></p>
 						<h2>Graphs</h2>
-						<div style="display: flex;"> 
-							<div class="image fit" style="margin-right: 10px; ">
+						<div class="img-gallery"> 
+							<div class="image fit img-gallery__item">
 								<a href="images/instacart/Dept_Orders.png" target="_blank">
-									<img src="images/instacart/Dept_Orders.png" alt=""/>
+									<img src="images/instacart/Dept_Orders.png" alt="Bar chart of departmental orders" />
 								</a>
 								<p style="text-align: center; margin: 10px;">
 									<strong>Departmental Orders</strong>
 								</p>
 							</div> 	
-							<div class="image fit" style="margin-left: 10px; " >
+							<div class="image fit img-gallery__item">
 								<a href="images/instacart/Add-to-cart-VS-reorder.png" target="_blank">
-									<img src="images/instacart/Add-to-cart-VS-reorder.png" alt=""/>
+									<img src="images/instacart/Add-to-cart-VS-reorder.png" alt="Add to cart vs reorder comparison chart" />
 								</a>
 								<p style="text-align: center; margin: 10px;">
 									<strong>ATC vs Reorder</strong>
