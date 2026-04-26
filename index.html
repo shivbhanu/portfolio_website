@@ -141,17 +141,8 @@
 							<h2>Portfolio</h2>
 							<p>A selection of projects spanning data analysis, dashboarding, and case studies. Click a title to explore.</p>
 
-							<!-- Category filter -->
-							<div class="portfolio-filter" id="portfolio-filter">
-								<button class="filter-btn active" data-filter="all">All</button>
-								<button class="filter-btn" data-filter="python">Python</button>
-								<button class="filter-btn" data-filter="sql">SQL</button>
-								<button class="filter-btn" data-filter="excel">Excel</button>
-								<button class="filter-btn" data-filter="tableau">Tableau</button>
-							</div>
-
 							<div class="features">
-								<section data-category="python sql tableau">
+								<section>
 									<a href="instacart.html">
 										<div class="feature-thumb">
 											<img src="images/projects/instacart/Dashboard_Final.webp" alt="Instacart analysis Tableau dashboard" loading="lazy" width="2460" height="1504" />
@@ -160,13 +151,16 @@
 									</a>
 									<p>Analysed 3.4M grocery orders from 200K Instacart users to uncover buying patterns using SQL, Python, and Tableau.</p>
 									<div class="feature-tags">
-										<span class="tag">Python</span>
-										<span class="tag">SQL</span>
-										<span class="tag">Tableau</span>
+										<span class="tag tag--tech">Python</span>
+										<span class="tag tag--tech">SQL</span>
+										<span class="tag tag--tech">Tableau</span>
+										<span class="tag tag--biz">Customer Analytics</span>
+										<span class="tag tag--biz">Market Segmentation</span>
+										<span class="tag tag--biz">Data Storytelling</span>
 									</div>
 								</section>
 
-								<section data-category="python">
+								<section>
 									<a href="expense.html">
 										<div class="feature-thumb">
 											<img src="images/projects/instacart/August_summary.webp" alt="Expense tracker automated monthly report" loading="lazy" width="2332" height="1378" />
@@ -175,11 +169,13 @@
 									</a>
 									<p>Built an automated expense dashboard that parses bank transaction emails and delivers structured monthly insights via Python.</p>
 									<div class="feature-tags">
-										<span class="tag">Python</span>
+										<span class="tag tag--tech">Python</span>
+										<span class="tag tag--biz">Process Automation</span>
+										<span class="tag tag--biz">Financial Reporting</span>
 									</div>
 								</section>
 
-								<section data-category="excel">
+								<section>
 									<a href="bike_sales.html">
 										<div class="feature-thumb">
 											<img src="images/projects/bike_sales/Dashboard.webp" alt="Bike sales Excel dashboard with slicers" loading="lazy" width="2018" height="1162" />
@@ -188,11 +184,13 @@
 									</a>
 									<p>Excel dashboard exploring customer demographics — age, income, region — and their influence on bike purchase decisions.</p>
 									<div class="feature-tags">
-										<span class="tag">Excel</span>
+										<span class="tag tag--tech">Excel</span>
+										<span class="tag tag--biz">Sales Analytics</span>
+										<span class="tag tag--biz">Customer Segmentation</span>
 									</div>
 								</section>
 
-								<section data-category="excel">
+								<section>
 									<a href="ecom_sales.html">
 										<div class="feature-thumb">
 											<img src="images/projects/ecom_sales/OC_dashboard.webp" alt="E-commerce order contribution dashboard" loading="lazy" width="1310" height="1260" />
@@ -201,11 +199,14 @@
 									</a>
 									<p>Examined e-commerce sales data, detected seasonal trends, and identified patterns in KPIs across categories and payment modes.</p>
 									<div class="feature-tags">
-										<span class="tag">Excel</span>
+										<span class="tag tag--tech">Excel</span>
+										<span class="tag tag--biz">KPI Monitoring</span>
+										<span class="tag tag--biz">Sales Operations</span>
+										<span class="tag tag--biz">Demand Analysis</span>
 									</div>
 								</section>
 
-								<section data-category="python">
+								<section>
 									<a href="roller_eda.html">
 										<div class="feature-thumb">
 											<img src="images/projects/roller_coaster/Feature_Correlation_Matrix.webp" alt="Roller coaster feature correlation heatmap" loading="lazy" width="800" height="550" />
@@ -214,32 +215,39 @@
 									</a>
 									<p>Exploratory data analysis on ~1,200 US roller coasters covering data preparation, feature correlation, and speed distribution patterns.</p>
 									<div class="feature-tags">
-										<span class="tag">Python</span>
+										<span class="tag tag--tech">Python</span>
+										<span class="tag tag--biz">Statistical Analysis</span>
+										<span class="tag tag--biz">Exploratory Analysis</span>
 									</div>
 								</section>
 
-								<section data-category="python tableau">
+								<section>
 									<a href="diwali_sales.html">
 										<span class="icon solid major fa-fire"></span>
 										<h3 class="project_hover">Diwali Sales Analysis</h3>
 									</a>
 									<p>Used Python to identify key customer cohorts — by age, gender, geography — driving sales during the Indian festive season.</p>
 									<div class="feature-tags">
-										<span class="tag">Python</span>
-										<span class="tag">Tableau</span>
+										<span class="tag tag--tech">Python</span>
+										<span class="tag tag--tech">Tableau</span>
+										<span class="tag tag--biz">Consumer Behaviour</span>
+										<span class="tag tag--biz">Cohort Analysis</span>
 									</div>
 								</section>
 
-								<section data-category="sql">
+								<section>
 									<a href="formel_skin.html">
 										<span class="icon solid major fa-spa"></span>
 										<h3 class="project_hover">Formel Skin — Case Study</h3>
 									</a>
 									<p>SQL financial reconciliation uncovering a €19,500 revenue gap and a Looker Studio ops dashboard for a Berlin skincare startup.</p>
 									<div class="feature-tags">
-										<span class="tag">SQL</span>
-										<span class="tag">BigQuery</span>
-										<span class="tag">Looker Studio</span>
+										<span class="tag tag--tech">SQL</span>
+										<span class="tag tag--tech">BigQuery</span>
+										<span class="tag tag--tech">Looker Studio</span>
+										<span class="tag tag--biz">Financial Reconciliation</span>
+										<span class="tag tag--biz">Revenue Analytics</span>
+										<span class="tag tag--biz">Ops Monitoring</span>
 									</div>
 								</section>
 							</div>
@@ -338,6 +346,5 @@
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/contact.js"></script>
-			<script src="assets/js/portfolio.js"></script>
 	</body>
 </html>
