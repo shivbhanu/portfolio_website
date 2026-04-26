@@ -1,4 +1,4 @@
-# Shiv Bhanu Singh — Data Analytics Portfolio
+# Shiv Bhanu Singh — Portfolio
 
 A personal portfolio website showcasing data analytics projects, professional experience, and personal background.
 
