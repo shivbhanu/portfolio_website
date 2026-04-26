@@ -1,4 +1,4 @@
-# Shiv Bhanu Singh — Portfolio
+# Shiv Singh — Portfolio
 
 A personal portfolio website showcasing data analytics projects, professional experience, and personal background.
 
@@ -56,4 +56,4 @@ Then visit `http://localhost:8000`.
 ## License
 
 Template: [HTML5 UP](https://html5up.net/) under the [CCA 3.0 license](https://html5up.net/license).  
-Content: © Shiv Bhanu Singh. All rights reserved.
+Content: © Shiv Singh. All rights reserved.
