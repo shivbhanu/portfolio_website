@@ -1962,7 +1962,6 @@ input, select, textarea {
 		-webkit-flex-wrap: wrap;
 		flex-wrap: wrap;
 		border-radius: 0.25em;
-		border: solid 1px rgba(255, 255, 255, 0.15);
 		background: rgba(255, 255, 255, 0.05);
 		margin: 0 0 2em 0;
 	}
@@ -1970,16 +1969,14 @@ input, select, textarea {
 		.features section {
 			padding: 3.5em 3em 1em 7em ;
 			width: 50%;
-			border-top: solid 1px rgba(255, 255, 255, 0.15);
+
 			position: relative;
 		}
 
 			.features section:nth-child(-n + 2) {
-				border-top-width: 0;
 			}
 
 			.features section:nth-child(2n) {
-				border-left: solid 1px rgba(255, 255, 255, 0.15);
 			}
 
 			.features section .icon {
@@ -2553,7 +2550,7 @@ input, select, textarea {
 		}
 
 			ul.alt li {
-				border-top: solid 1px rgba(255, 255, 255, 0.15);
+	
 				padding: 0.5em 0;
 			}
 
@@ -2733,7 +2730,6 @@ input, select, textarea {
 	}
 
 		ul.menu > li {
-			border-left: solid 1px rgba(255, 255, 255, 0.15);
 			display: inline-block;
 			line-height: 1;
 			margin-left: 1.5em;
@@ -2851,7 +2847,7 @@ input, select, textarea {
 			}
 
 				.split > * {
-					border-top: solid 1px rgba(255, 255, 255, 0.15);
+		
 					margin: 4em 0 0 0;
 					padding: 4em 0 0 0;
 					width: 100% !important;
@@ -3058,7 +3054,6 @@ input, select, textarea {
 			table.alt tbody tr td {
 				border: solid 1px rgba(255, 255, 255, 0.15);
 				border-left-width: 0;
-				border-top-width: 0;
 			}
 
 				table.alt tbody tr td:first-child {
@@ -3297,7 +3292,7 @@ input, select, textarea {
 				}
 
 				#header > nav {
-					border-top: solid 1px rgba(255, 255, 255, 0.15);
+		
 					text-align: inherit;
 				}
 
