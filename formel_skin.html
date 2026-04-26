@@ -9,9 +9,27 @@
 		<title>Formel Skin Case Study — Shiv Bhanu Singh</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="SQL financial reconciliation uncovering a €19,500 revenue gap and a Looker Studio ops dashboard for a Berlin-based skincare startup." />
+
+		<!-- Open Graph -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://shivbhanusingh.com/formel_skin.html" />
+		<meta property="og:title" content="Formel Skin Case Study — Shiv Bhanu Singh" />
+		<meta property="og:description" content="SQL financial reconciliation uncovering a €19,500 revenue gap and a Looker Studio ops performance dashboard for a Berlin skincare startup." />
+		<meta property="og:image" content="https://shivbhanusingh.com/images/personal/Final_Headshot.JPG" />
+
 		<link rel="icon" href="images/S_Title.jpeg" type="image/x-icon"/>
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<!-- Google Analytics 4: replace G-XXXXXXXXXX with your Measurement ID from analytics.google.com -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-XXXXXXXXXX');
+		</script>
 	</head>
 	<body class="is-preload">
 
@@ -45,9 +63,7 @@
 								</ul>
 
 								<h2>Overview</h2>
-								<p>
-									A two-part data analyst case study completed for an interview at <strong>Formel Skin</strong>, a Berlin-based digital dermatology startup offering personalised skincare subscriptions. The case study covers financial reconciliation and operations performance analysis, reflecting the OPS &amp; Finance Data Analyst role.
-								</p>
+								<p>A two-part data analyst case study completed for an interview at <strong>Formel Skin</strong>, a Berlin-based digital dermatology startup offering personalised skincare subscriptions. The case study covers financial reconciliation and operations performance analysis, reflecting the OPS &amp; Finance Data Analyst role.</p>
 								<p><strong>Tools used:</strong> Google BigQuery, SQL (dbt-style layered modelling), Looker Studio, Google Slides</p>
 
 								<hr />
@@ -58,9 +74,7 @@
 								<p>Investigate discrepancies between Formel Skin's backend order system and its invoicing system, quantify the revenue gap, and build an automated reconciliation model to prevent future drift.</p>
 
 								<h3>Approach</h3>
-								<p>
-									Used a layered SQL modelling approach (staging → intermediate → mart) in BigQuery to clean, normalise, and join order and invoice data. Applied EUR FX normalisation to handle multi-currency records and flagged each order-invoice pair by discrepancy type.
-								</p>
+								<p>Used a layered SQL modelling approach (staging → intermediate → mart) in BigQuery to clean, normalise, and join order and invoice data. Applied EUR FX normalisation to handle multi-currency records and flagged each order-invoice pair by discrepancy type.</p>
 
 								<h3>Key Findings</h3>
 								<ul>
@@ -79,18 +93,16 @@
 								<p>Design a metrics framework and Looker Studio dashboard to give the operations team visibility into case resolution performance and identify bottlenecks in the consultation workflow.</p>
 
 								<h3>Approach</h3>
-								<p>
-									Defined a metrics tree anchored on a single North Star KPI. Modelled consultation, order, and customer data through staging and intermediate SQL layers to produce an analysis-ready mart, then built the Looker Studio dashboard on top of it.
-								</p>
+								<p>Defined a metrics tree anchored on a single North Star KPI. Modelled consultation, order, and customer data through staging and intermediate SQL layers to produce an analysis-ready mart, then built the Looker Studio dashboard on top of it.</p>
 
 								<h3>North Star KPI</h3>
 								<p><strong>On-time case resolution rate</strong> — the share of consultations resolved within the target SLA window.</p>
 
 								<h3>Key Findings</h3>
 								<ul>
-									<li>Median resolution time is <strong>12.8 hours</strong>, but the <strong>P90 reaches 134 hours</strong> — indicating a long tail of severely delayed cases that drags overall service quality.</li>
+									<li>Median resolution time is <strong>12.8 hours</strong>, but the <strong>P90 reaches 134 hours</strong> — indicating a long tail of severely delayed cases.</li>
 									<li><strong>27.4% of consultations</strong> are stuck in a pending state due to unresolved payment issues upstream.</li>
-									<li><strong>5% of orders</strong> generate three or more consultations, signalling recurring issues that could be addressed with proactive intervention.</li>
+									<li><strong>5% of orders</strong> generate three or more consultations, signalling recurring issues addressable with proactive intervention.</li>
 									<li>Dashboard built in Looker Studio to give ops managers a live view of resolution rates, queue depth by agent, and payment-blocked consultation counts.</li>
 								</ul>
 
@@ -115,7 +127,7 @@
 			<footer id="footer" class="wrapper alt">
 				<div class="inner" style="align-items: center; justify-content: center;">
 					<ul class="menu">
-						<li>&copy; 2023 Shiv Bhanu Singh</li>
+						<li>&copy; 2024 Shiv Bhanu Singh</li>
 						<li><a href="mailto:shivbhanusingh08@gmail.com" class="icon solid fa-envelope" target="_blank" title="Mail"><span class="label">Mail</span></a></li>
 						<li><a href="https://www.linkedin.com/in/shiv-bhanu-singh/" class="icon brands fa-linkedin-in" target="_blank" title="LinkedIn"><span class="label">LinkedIn</span></a></li>
 						<li><a href="https://public.tableau.com/app/profile/shiv.bhanu.singh" class="icon solid fa-chart-bar" target="_blank" title="Tableau"><span class="label">Tableau</span></a></li>
@@ -126,12 +138,7 @@
 			</footer>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
 	</body>
