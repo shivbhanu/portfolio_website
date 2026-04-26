@@ -249,44 +249,44 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script>
-			(function () {
-				var form = document.getElementById('contact-form');
-				var btn  = document.getElementById('submit-btn');
-				var status = document.getElementById('form-status');
-
-				form.addEventListener('submit', function (e) {
+			// jQuery's event system is used here so that main.js's .submit() trigger
+			// (which bypasses native addEventListener) is intercepted correctly.
+			$(document).ready(function () {
+				$('#contact-form').on('submit', function (e) {
 					e.preventDefault();
-					btn.disabled = true;
-					btn.textContent = 'Sending…';
-					status.style.display = 'none';
+					var form    = this;
+					var $btn    = $('#submit-btn');
+					var $status = $('#form-status');
 
-					fetch(form.action, {
+					$btn.prop('disabled', true).text('Sending…');
+					$status.hide();
+
+					fetch($(form).attr('action'), {
 						method: 'POST',
 						body: new FormData(form),
 						headers: { 'Accept': 'application/json' }
 					})
 					.then(function (res) {
 						if (res.ok) {
-							status.textContent = 'Message sent! I will get back to you soon.';
-							status.style.color = '#4caf50';
+							$status.text('Message sent! I will get back to you soon.').css('color', '#4caf50');
 							form.reset();
 						} else {
 							return res.json().then(function (data) {
-								throw new Error(data.errors ? data.errors.map(function(e){ return e.message; }).join(', ') : 'Submission failed.');
+								throw new Error(data.errors
+									? data.errors.map(function (err) { return err.message; }).join(', ')
+									: 'Submission failed.');
 							});
 						}
 					})
 					.catch(function (err) {
-						status.textContent = 'Oops! ' + err.message;
-						status.style.color = '#e74c3c';
+						$status.text('Oops! ' + err.message).css('color', '#e74c3c');
 					})
 					.finally(function () {
-						btn.disabled = false;
-						btn.textContent = 'Send Message';
-						status.style.display = 'block';
+						$btn.prop('disabled', false).text('Send Message');
+						$status.show();
 					});
 				});
-			})();
+			});
 		</script>
 	</body>
 </html>
