@@ -9,9 +9,27 @@
 		<title>Roller Coaster EDA — Shiv Bhanu Singh</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="Python exploratory data analysis on ~1,200 US roller coasters examining speed distributions, height correlations, and feature relationships." />
+
+		<!-- Open Graph -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://shivbhanusingh.com/roller_eda.html" />
+		<meta property="og:title" content="Roller Coaster EDA — Shiv Bhanu Singh" />
+		<meta property="og:description" content="Python exploratory data analysis on ~1,200 US roller coasters examining speed distributions, height correlations, and feature relationships." />
+		<meta property="og:image" content="https://shivbhanusingh.com/images/projects/roller_coaster/Feature_Correlation_Matrix.webp" />
+
 		<link rel="icon" href="images/S_Title.jpeg" type="image/x-icon"/>
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<!-- Google Analytics 4: replace G-XXXXXXXXXX with your Measurement ID from analytics.google.com -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-XXXXXXXXXX');
+		</script>
 	</head>
 	<body class="is-preload">
 
@@ -20,11 +38,11 @@
 				<a href="index.html#two" class="title">Shiv Bhanu Singh</a>
 				<nav>
 					<ul>
-						<li><a href="index.html" class = "Active" >Home</a></li>
-						<li><a href="index.html#one" class = "Active" >About Me</a></li>
-						<li><a href="index.html#two" class = "Active" >Portfolio</a></li>
-						<li><a href="index.html#four" class = "Active" >Resume</a></li>
-						<li><a href="index.html#three" class = "Active" >Get in Touch</a></li>
+						<li><a href="index.html" class="Active">Home</a></li>
+						<li><a href="index.html#one" class="Active">About Me</a></li>
+						<li><a href="index.html#two" class="Active">Portfolio</a></li>
+						<li><a href="index.html#four" class="Active">Resume</a></li>
+						<li><a href="index.html#three" class="Active">Get in Touch</a></li>
 					</ul>
 				</nav>
 			</header>
@@ -34,68 +52,48 @@
 
 				<!-- Main -->
 					<section id="main" class="wrapper">
-						
-						<div class="inner" >
-							
+						<div class="inner">
 							<h1 class="major">Roller Coaster EDA</h1>
-						
+
 							<main>
 								<ul class="actions">
 									<li><a href="https://github.com/shivbhanu/Data_Analyst-Portfolio_Project/tree/main/Python_Projects/002-roller-coaster-eda" target="_blank" class="button scrolly">View Github Repo</a></li>
-									<!-- <li><a href="https://public.tableau.com/app/profile/shiv.bhanu.singh/viz/DiwaliSalesAnalysis_16927258023040/Dashboard1?publish=yes" target="_blank" class="button scrolly">View Tableau Viz</a></li> -->
 								</ul>
-							<h2>Objective</h2>
-							<p>To analyze and establish relationship between features of roller coaster across USA.</p>
-							
-							<h2>Dataset Summary</h2>
-							
-								<p>The provided dataset contains information about ~1200 roller coasters across USA. Information such as height, speed, number of inversions, year of estbalishment,etc was provided. 
-								</p>
-							
-							<h2>Process</h2>
-							<p>
-								Exploratory data analysis was performed using Python but plotting charts at multiple cuts. Also correlation between various features was established using correlation heatmap.								
-							</p>
-							<h2>Key Insights</h2>
-							<ul>
-								<li>Most number of roller coasters were introduced in the year 1999 and 2000.</li>
-								<li>In the frequency distribution of speed, its visible that most coasters have speed ranging 40-60mph.</li>
-								<li>There's direct correlation between height and speed of the roller coaster. Also lastest coasters were more advanced and have hihger speed than earlier ones.</li>								
-							</ul>
-						</main>
-						
-						
-						<h2>Graphs</h2>
-						<div class="img-gallery"> 
-							<div class="image fit img-gallery__item">
-								<a href="Projects/Images/roller_coaster/Freq_Dist_speed.png" target="_blank">
-									<img src="Projects/Images/roller_coaster/Freq_Dist_speed.png" alt="Frequency distribution of roller coaster speed" />
-								</a>	
-								<p style="text-align: center; margin: 10px;">
-									<strong>frequency Dist of Speed</strong>
-								</p>
-							</div> 	
-							<div class="image fit img-gallery__item">
-								<a href="Projects/Images/roller_coaster/Feature_Correlation_Matrix.png" target="_blank">
-									<img src="Projects/Images/roller_coaster/Feature_Correlation_Matrix.png" alt="Feature correlation matrix heatmap" />
-								</a>
-								<p style="text-align: center; margin: 10px;">
-									<strong>Features Correlation Matrix</strong>
-								</p>
-							</div> 	
+
+								<h2>Objective</h2>
+								<p>Analyse and establish relationships between features of roller coasters across the USA.</p>
+
+								<h2>Dataset Summary</h2>
+								<p>The dataset contains information about ~1,200 roller coasters across the USA, including height, speed, number of inversions, year of establishment, and more.</p>
+
+								<h2>Process</h2>
+								<p>Exploratory data analysis was performed using Python by plotting charts at multiple cuts. Feature correlations were established using a correlation heatmap.</p>
+
+								<h2>Key Insights</h2>
+								<ul>
+									<li>Most roller coasters were introduced in 1999 and 2000.</li>
+									<li>The frequency distribution of speed shows most coasters fall in the 40–60 mph range.</li>
+									<li>There is a direct positive correlation between height and speed. Newer coasters also tend to be faster than earlier ones.</li>
+								</ul>
+							</main>
+
+							<h2>Graphs</h2>
+							<div class="img-gallery">
+								<div class="image fit img-gallery__item">
+									<a href="images/projects/roller_coaster/Freq_Dist_speed.webp" target="_blank">
+										<img src="images/projects/roller_coaster/Freq_Dist_speed.webp" alt="Frequency distribution of roller coaster speed" loading="lazy" width="800" height="550" />
+									</a>
+									<p style="text-align: center; margin: 10px;"><strong>Frequency Distribution of Speed</strong></p>
+								</div>
+								<div class="image fit img-gallery__item">
+									<a href="images/projects/roller_coaster/Feature_Correlation_Matrix.webp" target="_blank">
+										<img src="images/projects/roller_coaster/Feature_Correlation_Matrix.webp" alt="Feature correlation matrix heatmap" loading="lazy" width="800" height="550" />
+									</a>
+									<p style="text-align: center; margin: 10px;"><strong>Features Correlation Matrix</strong></p>
+								</div>
+							</div>
+
 						</div>
-							<!-- <hr style="margin-top: 2px ;"> -->
-							<!-- <span >
-								<h3 style="text-align: center;">
-									<strong>Tabluea Viz</strong>
-								</h3>
-							</span> 	 -->
-							<!-- <span class="image fit"><a href="Projects/Images/Bike_Sales/Dashboard.png" target="_blank"><img src="Projects/Images/Bike_Sales/Dashboard.png" alt="" /></a></span> 	 -->
-							<!-- <div class='tableauPlaceholder' id='viz1692725871339' style='position: relative'><noscript><a href='#'><img alt='Diwali Sales Analysis ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;XZ&#47;XZ6Y34426&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;XZ6Y34426' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;XZ&#47;XZ6Y34426&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1692725871339');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='1277px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-					</div> -->
-							
-						
-					
 					</section>
 
 			</div>
@@ -104,24 +102,18 @@
 			<footer id="footer" class="wrapper alt">
 				<div class="inner" style="align-items: center; justify-content: center;">
 					<ul class="menu">
-						<li>&copy; 2023 Shiv Bhanu Singh</li>
-						<li><a href="mailto:shivbhanusingh08@gmail.com" class="icon solid fa-envelope" target="_blank" title = "Mail"><span class="label">LinkedIn</span></a></li>
-						<li><a href="https://www.linkedin.com/in/shiv-bhanu-singh/" class="icon brands fa-linkedin-in" target="_blank" title = "LinkedIn"><span class="label">LinkedIn</span></a></li>
-						<li><a href="https://public.tableau.com/app/profile/shiv.bhanu.singh" class="icon solid fa-chart-bar" target="_blank" title = "Tableau"><span class="label">Tableau</span></a></li>
-						<li><a href="https://github.com/shivbhanu" class="icon brands fa-github" target="_blank" title = "GitHub"><span class="label" >GitHub</span></a></li>
-						<li><a href="https://www.instagram.com/_shivbhanusingh/" class="icon brands fa-instagram" target="_blank" title = "Instagram"><span class="label">Instagram</span></a></li>	
-						
+						<li>&copy; 2024 Shiv Bhanu Singh</li>
+						<li><a href="mailto:shivbhanusingh08@gmail.com" class="icon solid fa-envelope" target="_blank" title="Mail"><span class="label">Mail</span></a></li>
+						<li><a href="https://www.linkedin.com/in/shiv-bhanu-singh/" class="icon brands fa-linkedin-in" target="_blank" title="LinkedIn"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://public.tableau.com/app/profile/shiv.bhanu.singh" class="icon solid fa-chart-bar" target="_blank" title="Tableau"><span class="label">Tableau</span></a></li>
+						<li><a href="https://github.com/shivbhanu" class="icon brands fa-github" target="_blank" title="GitHub"><span class="label">GitHub</span></a></li>
+						<li><a href="https://www.instagram.com/_shivbhanusingh/" class="icon brands fa-instagram" target="_blank" title="Instagram"><span class="label">Instagram</span></a></li>
 					</ul>
 				</div>
 			</footer>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
 	</body>

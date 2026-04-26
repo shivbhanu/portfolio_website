@@ -9,9 +9,27 @@
 		<title>Personal Expense Tracker — Shiv Bhanu Singh</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="Automated Python tool that parses bank transaction emails, extracts spending data, and delivers a structured monthly expense report." />
+
+		<!-- Open Graph -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://shivbhanusingh.com/expense.html" />
+		<meta property="og:title" content="Personal Expense Tracker — Shiv Bhanu Singh" />
+		<meta property="og:description" content="Automated Python tool that parses bank transaction emails, extracts spending data, and delivers a structured monthly expense report." />
+		<meta property="og:image" content="https://shivbhanusingh.com/images/projects/instacart/August_summary.webp" />
+
 		<link rel="icon" href="images/S_Title.jpeg" type="image/x-icon"/>
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<!-- Google Analytics 4: replace G-XXXXXXXXXX with your Measurement ID from analytics.google.com -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-XXXXXXXXXX');
+		</script>
 	</head>
 	<body class="is-preload">
 
@@ -20,11 +38,11 @@
 				<a href="index.html#two" class="title">Shiv Bhanu Singh</a>
 				<nav>
 					<ul>
-						<li><a href="index.html" class = "Active" >Home</a></li>
-						<li><a href="index.html#one" class = "Active" >About Me</a></li>
-						<li><a href="index.html#two" class = "Active" >Portfolio</a></li>
-						<li><a href="index.html#four" class = "Active" >Resume</a></li>
-						<li><a href="index.html#three" class = "Active" >Get in Touch</a></li>
+						<li><a href="index.html" class="Active">Home</a></li>
+						<li><a href="index.html#one" class="Active">About Me</a></li>
+						<li><a href="index.html#two" class="Active">Portfolio</a></li>
+						<li><a href="index.html#four" class="Active">Resume</a></li>
+						<li><a href="index.html#three" class="Active">Get in Touch</a></li>
 					</ul>
 				</nav>
 			</header>
@@ -34,70 +52,53 @@
 
 				<!-- Main -->
 					<section id="main" class="wrapper">
-						
-						<div class="inner" >
-							
+						<div class="inner">
 							<h1 class="major">Personal Expense Tracker</h1>
-						
+
 							<main>
 								<ul class="actions">
 									<li><a href="https://github.com/shivbhanu/Data_Analyst-Portfolio_Project/tree/main/Expense_Tracker" target="_blank" class="button scrolly">View Github Repo</a></li>
-									<!-- <li><a href="https://public.tableau.com/views/InstacartCustomerAnalysis/Dashboard1?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link" target="_blank" class="button scrolly">View Tableau Viz</a></li> -->
 								</ul>
-							<h2 >Objective</h2>
-							<p>To track my daily expenses and build automated report/tracker using transaction mails from bank.</p>
-							
-							<!-- <h2>Dataset Summary</h2>
-							<ul>
-								<li><strong> Aisles and Departments </strong> : There are 134 unique aisles and 21 unique departments, categorizing the products.</li>
-								<li><strong> Orders and Users </strong> : A total of <strong>3.4M </strong> orders have been placed by <strong> ~200K</strong> users, indicating substantial user engagement.</li>
-								<li><strong> Products</strong>: The dataset includes <strong>~50k</strong> products categorized by aisle and department.</li>
-								<li><strong> User Information</strong>: Additional user data includes order day, order hour, days since last order, and reorder flags.</li>
-							</ul> -->
-							<h2>Process</h2>
-							<p>
-								The process included the following :
-								<li>Collect and process the gmail body html and convert it to readable text.</li>
-								<li>Identify patterns in body text to drill down information such as Amount, Mode, Source and Destination of transaction.</li>
-								<li>Build different visualizations to get view on Lifetime expenses, Savings, Mode of Expense and its contribution percentage.</li>
-								<li>Build report to get current month's daily and cumunlative amount and % of budget spent.</li>
-							</p>
-							<h2>Key Insights</h2>
-							<ul>
-								<li>From July'19 to till date. I have spent around 46L INR. This includes all the transactions.</li>
-								<li>UPI Contributes to ~81% of my overall lifetime expense, followed by Credit Card (13%).</li>
-								<li>High-value transactions occur during daytime and evenings, peaking on Sundays after 8PM.</li>
-								<li>However, if we look at the number of transactions, most of them happened after 8PM on all days, peaking on Tuesdays.</li>
-							</ul>
-						</main>
-						<p></p>
-						<h2>Graphs</h2>
-						<div class="img-gallery"> 
-							<div class="image fit img-gallery__item"><img src="Projects/Images/instacart/total_expense.png" alt="Total monthly expense chart" />
-								<p style="text-align: center; margin: 10px;">
-									<strong>Total Expense : Monthly</strong>
-								</p>
-							</div> 	
-							<div class="image fit img-gallery__item"><img src="Projects/Images/instacart/dow_hod_num.png" alt="Day of week vs hour of day transaction heatmap" />
-								<p style="text-align: center; margin: 10px;">
-									<strong>Day of Week vs Hour of Day : Transactions</strong>
-								</p>
-							</div> 	
+
+								<h2>Objective</h2>
+								<p>Track daily expenses and build an automated report using transaction emails from the bank.</p>
+
+								<h2>Process</h2>
+								<ul>
+									<li>Collect and process Gmail HTML bodies and convert them into readable text.</li>
+									<li>Identify patterns in body text to extract Amount, Mode, Source, and Destination of each transaction.</li>
+									<li>Build visualisations for lifetime expenses, savings, mode of expense, and contribution percentages.</li>
+									<li>Build a monthly report showing daily and cumulative amount alongside percentage of budget spent.</li>
+								</ul>
+
+								<h2>Key Insights</h2>
+								<ul>
+									<li>From July 2019 to date, total spend is approximately ₹46L across all transactions.</li>
+									<li>UPI accounts for ~81% of lifetime expense, followed by Credit Card (13%).</li>
+									<li>High-value transactions peak during daytime and evenings, with a spike on Sundays after 8 PM.</li>
+									<li>By transaction count, most activity happens after 8 PM on all days, peaking on Tuesdays.</li>
+								</ul>
+							</main>
+
+							<h2>Graphs</h2>
+							<div class="img-gallery">
+								<div class="image fit img-gallery__item">
+									<img src="images/projects/instacart/total_expense.webp" alt="Total monthly expense chart" loading="lazy" width="1200" height="600" />
+									<p style="text-align: center; margin: 10px;"><strong>Total Expense: Monthly</strong></p>
+								</div>
+								<div class="image fit img-gallery__item">
+									<img src="images/projects/instacart/dow_hod_num.webp" alt="Day of week vs hour of day transaction heatmap" loading="lazy" width="1200" height="600" />
+									<p style="text-align: center; margin: 10px;"><strong>Day of Week vs Hour of Day: Transactions</strong></p>
+								</div>
 							</div>
-							<hr style="margin-top: 2px ;">
-							<span >
-								<h3 style="text-align: center;">
-									<strong>Automated Mail Report</strong>
-								</h3>
-							</span> 	
-							<div class="image fit"><img src="Projects/Images/instacart/August_summary.png" alt="August expense summary automated mail report" /></div>
-							<!-- <div class='tableauPlaceholder' id='viz1692652741028' style='position: relative'><noscript><a href='#'><img alt='Instacart Customer Analysis ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;In&#47;InstacartCustomerAnalysis&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='InstacartCustomerAnalysis&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;In&#47;InstacartCustomerAnalysis&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1692652741028');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='1777px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script> -->
-						
-					
-					</div>
-							
-						
-					
+
+							<hr style="margin-top: 2px;">
+							<h3 style="text-align: center;"><strong>Automated Mail Report</strong></h3>
+							<div class="image fit">
+								<img src="images/projects/instacart/August_summary.webp" alt="August expense summary automated mail report" loading="lazy" width="2332" height="1378" />
+							</div>
+
+						</div>
 					</section>
 
 			</div>
@@ -106,24 +107,18 @@
 			<footer id="footer" class="wrapper alt">
 				<div class="inner" style="align-items: center; justify-content: center;">
 					<ul class="menu">
-						<li>&copy; 2023 Shiv Bhanu Singh</li>
-						<li><a href="mailto:shivbhanusingh08@gmail.com" class="icon solid fa-envelope" target="_blank" title = "Mail"><span class="label">LinkedIn</span></a></li>
-						<li><a href="https://www.linkedin.com/in/shiv-bhanu-singh/" class="icon brands fa-linkedin-in" target="_blank" title = "LinkedIn"><span class="label">LinkedIn</span></a></li>
-						<li><a href="https://public.tableau.com/app/profile/shiv.bhanu.singh" class="icon solid fa-chart-bar" target="_blank" title = "Tableau"><span class="label">Tableau</span></a></li>
-						<li><a href="https://github.com/shivbhanu" class="icon brands fa-github" target="_blank" title = "GitHub"><span class="label" >GitHub</span></a></li>
-						<li><a href="https://www.instagram.com/_shivbhanusingh/" class="icon brands fa-instagram" target="_blank" title = "Instagram"><span class="label">Instagram</span></a></li>	
-						
+						<li>&copy; 2024 Shiv Bhanu Singh</li>
+						<li><a href="mailto:shivbhanusingh08@gmail.com" class="icon solid fa-envelope" target="_blank" title="Mail"><span class="label">Mail</span></a></li>
+						<li><a href="https://www.linkedin.com/in/shiv-bhanu-singh/" class="icon brands fa-linkedin-in" target="_blank" title="LinkedIn"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://public.tableau.com/app/profile/shiv.bhanu.singh" class="icon solid fa-chart-bar" target="_blank" title="Tableau"><span class="label">Tableau</span></a></li>
+						<li><a href="https://github.com/shivbhanu" class="icon brands fa-github" target="_blank" title="GitHub"><span class="label">GitHub</span></a></li>
+						<li><a href="https://www.instagram.com/_shivbhanusingh/" class="icon brands fa-instagram" target="_blank" title="Instagram"><span class="label">Instagram</span></a></li>
 					</ul>
 				</div>
 			</footer>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
 	</body>

@@ -1,186 +1,112 @@
 /*
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	Hyperspace by HTML5 UP — vanilla JS rewrite (no jQuery)
 */
 
-(function($) {
+(function () {
+	'use strict';
 
-	var	$window = $(window),
-		$body = $('body'),
-		$sidebar = $('#sidebar');
+	var body = document.body;
+	var sidebar = document.getElementById('sidebar');
 
-	// Breakpoints.
-		breakpoints({
-			xlarge:   [ '1281px',  '1680px' ],
-			large:    [ '981px',   '1280px' ],
-			medium:   [ '737px',   '980px'  ],
-			small:    [ '481px',   '736px'  ],
-			xsmall:   [ null,      '480px'  ]
-		});
+	// Remove preload class after page load.
+	window.addEventListener('load', function () {
+		setTimeout(function () { body.classList.remove('is-preload'); }, 100);
+	});
 
-	// Play initial animations on page load.
-		$window.on('load', function() {
-			window.setTimeout(function() {
-				$body.removeClass('is-preload');
-			}, 100);
-		});
+	// Hack: activate non-input submit elements.
+	document.addEventListener('click', function (e) {
+		if (e.target.classList.contains('submit')) {
+			e.stopPropagation();
+			e.preventDefault();
+			e.target.closest('form').submit();
+		}
+	});
 
-	// Forms.
+	// Sidebar navigation with scroll-based active link tracking.
+	if (sidebar) {
+		var sidebarLinks = Array.from(sidebar.querySelectorAll('a'));
 
-		// Hack: Activate non-input submits.
-			$('form').on('click', '.submit', function(event) {
-
-				// Stop propagation, default.
-					event.stopPropagation();
-					event.preventDefault();
-
-				// Submit form.
-					$(this).parents('form').submit();
-
+		sidebarLinks.forEach(function (link) {
+			link.addEventListener('click', function () {
+				var href = link.getAttribute('href');
+				if (!href || href.charAt(0) !== '#') return;
+				sidebarLinks.forEach(function (l) { l.classList.remove('active'); });
+				link.classList.add('active', 'active-locked');
 			});
 
-	// Sidebar.
-		if ($sidebar.length > 0) {
+			var href = link.getAttribute('href');
+			if (!href || href.charAt(0) !== '#') return;
+			var section = document.querySelector(href);
+			if (!section) return;
 
-			var $sidebar_a = $sidebar.find('a');
+			section.classList.add('inactive');
 
-			$sidebar_a
-				.addClass('scrolly')
-				.on('click', function() {
+			new IntersectionObserver(function (entries) {
+				entries.forEach(function (entry) {
+					if (!entry.isIntersecting) return;
+					entry.target.classList.remove('inactive');
 
-					var $this = $(this);
-
-					// External link? Bail.
-						if ($this.attr('href').charAt(0) != '#')
-							return;
-
-					// Deactivate all links.
-						$sidebar_a.removeClass('active');
-
-					// Activate link *and* lock it (so Scrollex doesn't try to activate other links as we're scrolling to this one's section).
-						$this
-							.addClass('active')
-							.addClass('active-locked');
-
-				})
-				.each(function() {
-
-					var	$this = $(this),
-						id = $this.attr('href'),
-						$section = $(id);
-
-					// No section for this link? Bail.
-						if ($section.length < 1)
-							return;
-
-					// Scrollex.
-						$section.scrollex({
-							mode: 'middle',
-							top: '-20vh',
-							bottom: '-20vh',
-							initialize: function() {
-
-								// Deactivate section.
-									$section.addClass('inactive');
-
-							},
-							enter: function() {
-
-								// Activate section.
-									$section.removeClass('inactive');
-
-								// No locked links? Deactivate all links and activate this section's one.
-									if ($sidebar_a.filter('.active-locked').length == 0) {
-
-										$sidebar_a.removeClass('active');
-										$this.addClass('active');
-
-									}
-
-								// Otherwise, if this section's link is the one that's locked, unlock it.
-									else if ($this.hasClass('active-locked'))
-										$this.removeClass('active-locked');
-
-							}
-						});
-
+					var locked = sidebar.querySelectorAll('.active-locked');
+					if (locked.length === 0) {
+						sidebarLinks.forEach(function (l) { l.classList.remove('active'); });
+						link.classList.add('active');
+					} else if (link.classList.contains('active-locked')) {
+						link.classList.remove('active-locked');
+					}
 				});
+			}, { rootMargin: '-20% 0px -20% 0px', threshold: 0 }).observe(section);
+		});
+	}
 
+	// Smooth scroll for .scrolly elements with sidebar-height offset on medium screens.
+	document.querySelectorAll('.scrolly').forEach(function (el) {
+		el.addEventListener('click', function (e) {
+			var href = el.getAttribute('href');
+			if (!href || href.charAt(0) !== '#') return;
+			var target = document.querySelector(href);
+			if (!target) return;
+
+			e.preventDefault();
+
+			var offset = 0;
+			var isMedium = window.matchMedia('(min-width: 481px) and (max-width: 1280px)').matches;
+			if (sidebar && isMedium) offset = sidebar.offsetHeight;
+
+			var top = target.getBoundingClientRect().top + window.scrollY - offset;
+			window.scrollTo({ top: top, behavior: 'smooth' });
+		});
+	});
+
+	// Spotlights: set CSS background-image from img src, hide the <img>, fade in on scroll.
+	document.querySelectorAll('.spotlights > section').forEach(function (section) {
+		section.classList.add('inactive');
+
+		var image = section.querySelector('.image');
+		var img = image ? image.querySelector('img') : null;
+
+		if (image && img) {
+			image.style.backgroundImage = 'url(' + img.getAttribute('src') + ')';
+			var pos = img.getAttribute('data-position');
+			if (pos) image.style.backgroundPosition = pos;
+			img.style.display = 'none';
 		}
 
-	// Scrolly.
-		$('.scrolly').scrolly({
-			speed: 1000,
-			offset: function() {
-
-				// If <=large, >small, and sidebar is present, use its height as the offset.
-					if (breakpoints.active('<=large')
-					&&	!breakpoints.active('<=small')
-					&&	$sidebar.length > 0)
-						return $sidebar.height();
-
-				return 0;
-
-			}
-		});
-
-	// Spotlights.
-		$('.spotlights > section')
-			.scrollex({
-				mode: 'middle',
-				top: '-10vh',
-				bottom: '-10vh',
-				initialize: function() {
-
-					// Deactivate section.
-						$(this).addClass('inactive');
-
-				},
-				enter: function() {
-
-					// Activate section.
-						$(this).removeClass('inactive');
-
-				}
-			})
-			.each(function() {
-
-				var	$this = $(this),
-					$image = $this.find('.image'),
-					$img = $image.find('img'),
-					x;
-
-				// Assign image.
-					$image.css('background-image', 'url(' + $img.attr('src') + ')');
-
-				// Set background position.
-					if (x = $img.data('position'))
-						$image.css('background-position', x);
-
-				// Hide <img>.
-					$img.hide();
-
+		new IntersectionObserver(function (entries) {
+			entries.forEach(function (entry) {
+				if (entry.isIntersecting) entry.target.classList.remove('inactive');
 			});
+		}, { rootMargin: '-10% 0px -10% 0px', threshold: 0 }).observe(section);
+	});
 
-	// Features.
-		$('.features')
-			.scrollex({
-				mode: 'middle',
-				top: '-20vh',
-				bottom: '-20vh',
-				initialize: function() {
+	// Features grid: fade in on scroll.
+	document.querySelectorAll('.features').forEach(function (features) {
+		features.classList.add('inactive');
 
-					// Deactivate section.
-						$(this).addClass('inactive');
-
-				},
-				enter: function() {
-
-					// Activate section.
-						$(this).removeClass('inactive');
-
-				}
+		new IntersectionObserver(function (entries) {
+			entries.forEach(function (entry) {
+				if (entry.isIntersecting) entry.target.classList.remove('inactive');
 			});
+		}, { rootMargin: '-20% 0px -20% 0px', threshold: 0 }).observe(features);
+	});
 
-})(jQuery);
+})();

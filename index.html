@@ -9,10 +9,28 @@
 		<title>Shiv Bhanu Singh — Data Analytics Portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="description" content="Portfolio of Shiv Bhanu Singh, Data Analytics Professional specialising in Python, SQL, and Tableau." />
+		<meta name="description" content="Portfolio of Shiv Bhanu Singh, Data Analytics Professional specialising in Python, SQL, Tableau, Excel, and BigQuery." />
+
+		<!-- Open Graph -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://shivbhanusingh.com/" />
+		<meta property="og:title" content="Shiv Bhanu Singh — Data Analytics Portfolio" />
+		<meta property="og:description" content="Senior Data Analyst with experience at Meesho, OLA, and Myntra. Projects in Python, SQL, Tableau, and Excel." />
+		<meta property="og:image" content="https://shivbhanusingh.com/images/personal/Final_Headshot.JPG" />
+
 		<link rel="icon" href="images/S_Title.jpeg" type="image/x-icon"/>
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/portfolio.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<!-- Google Analytics 4: replace G-XXXXXXXXXX with your Measurement ID from analytics.google.com -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-XXXXXXXXXX');
+		</script>
 	</head>
 	<body class="is-preload">
 
@@ -23,6 +41,7 @@
 						<ul>
 							<li><a href="#intro">Welcome</a></li>
 							<li><a href="#one">About Me</a></li>
+							<li><a href="#skills">Skills</a></li>
 							<li><a href="#two">Portfolio</a></li>
 							<li><a href="#four">Resume</a></li>
 							<li><a href="#three">Get in touch</a></li>
@@ -39,21 +58,21 @@
 						<div class="inner">
 							<h2>Hi, I am</h2>
 							<h1>Shiv Bhanu Singh</h1>
-							<p>I want to help others to make the insighful data-driven decisions.</p>
+							<p>I want to help others to make the insightful data-driven decisions.</p>
 							<ul class="actions">
 								<li><a href="#one" class="button scrolly">About me</a></li>
 							</ul>
 						</div>
 					</section>
 
-				<!-- One -->
+				<!-- One — About Me -->
 					<section id="one" class="wrapper style2 spotlights">
 						<section>
-							<a href="personal_life.html" class="image"><img src="images/Shiv.jpeg" alt="Shiv Bhanu Singh" data-position="center center" /></a>
+							<a href="personal_life.html" class="image"><img src="images/personal/Shiv.webp" alt="Shiv Bhanu Singh" data-position="center center" loading="lazy" width="4691" height="2985" /></a>
 							<div class="content">
 								<div class="inner">
 									<h2>Personal Details</h2>
-									<p>Welcome to my website. Click below to take a sneak peak into my life. </p>
+									<p>Welcome to my website. Click below to take a sneak peak into my life.</p>
 									<ul class="actions">
 										<li><a href="personal_life.html" class="button">Click Me!</a></li>
 									</ul>
@@ -61,127 +80,196 @@
 							</div>
 						</section>
 						<section>
-							<a href="professional_page.html" class="image"><img src="images/Final_Headshot.JPG" alt="Shiv Bhanu Singh professional headshot" data-position="top center" /></a>
+							<a href="professional_page.html" class="image"><img src="images/personal/Final_Headshot.webp" alt="Shiv Bhanu Singh professional headshot" data-position="top center" loading="lazy" width="3643" height="3832" /></a>
 							<div class="content">
 								<div class="inner">
 									<h2>Professional Experience</h2>
-									<p>I am a dedicated Data Analytics Professional, and I am thrilled to share my journey and experiences with you. Click below to know more about my professional journey. </p>
+									<p>I am a dedicated Data Analytics Professional, and I am thrilled to share my journey and experiences with you. Click below to know more about my professional journey.</p>
 									<ul class="actions">
 										<li><a href="professional_page.html" class="button">Dive in!</a></li>
 									</ul>
 								</div>
 							</div>
 						</section>
-						<!-- <section>
-							<a href="#" class="image"><img src="images/pic03.jpg" alt="" data-position="25% 25%" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Ultricies aliquam</h2>
-									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
-									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
-									</ul>
+					</section>
+
+				<!-- Skills -->
+					<section id="skills" class="wrapper style1 fade-up">
+						<div class="inner">
+							<h2>Skills &amp; Tools</h2>
+							<p>Technologies I use to extract, model, and visualise insights from data.</p>
+							<div class="skills-grid">
+								<div class="skill-card">
+									<span class="icon brands fa-python"></span>
+									<span class="skill-name">Python</span>
+								</div>
+								<div class="skill-card">
+									<span class="icon solid fa-database"></span>
+									<span class="skill-name">SQL</span>
+								</div>
+								<div class="skill-card">
+									<span class="icon solid fa-chart-bar"></span>
+									<span class="skill-name">Tableau</span>
+								</div>
+								<div class="skill-card">
+									<span class="icon solid fa-file-excel"></span>
+									<span class="skill-name">Excel</span>
+								</div>
+								<div class="skill-card">
+									<span class="icon solid fa-table"></span>
+									<span class="skill-name">Pandas</span>
+								</div>
+								<div class="skill-card">
+									<span class="icon solid fa-cloud"></span>
+									<span class="skill-name">BigQuery</span>
+								</div>
+								<div class="skill-card">
+									<span class="icon solid fa-chart-line"></span>
+									<span class="skill-name">Looker Studio</span>
+								</div>
+								<div class="skill-card">
+									<span class="icon brands fa-github"></span>
+									<span class="skill-name">Git &amp; GitHub</span>
 								</div>
 							</div>
-						</section>
-					<section>
-						<a href="#" class="image"><img src="images/pic03.jpg" alt="" data-position="25% 25%" /></a>
-						<div class="content">
-							<div class="inner">
-								<h2>Ultriciaxdasdes aliquam</h2>
-								<p>Phaselldasdasdadsadus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
-								<ul class="actions">
-									<li><a href="generic.html" class="button">Learn more</a></li>
-								</ul>
-							</div>
-						</div>
-					</section> -->
-				</section>
-
-				<!-- Two -->
-					<section id="two" class="wrapper style3 fade-up">
-						<div class="inner">
-							<h2>Portfolio</h2>
-							<p>Hello, this is my personal project portfolio. Click on the headers for more details. </p>
-							<div class="features">
-								<section>
-									<a href="instacart.html" >
-									<span class="icon solid major fa-carrot"></span>
-									<h3 class = "project_hover" >Instacart Customer Analysis</h3>	</a>
-									<p>Analyzed 3M grocery orders from 200K Instacart users, found buying patterns using SQL, Python, and Tableau.</p>
-									
-								</section>
-								<section>
-									<a href="expense.html" >
-									<span class="icon solid major fa-code"></span>
-									<h3 class = "project_hover">Expense Tracker</h3></a>
-									<p>Developed an expense dashboard to monitor daily spending, organized email data for structured insights using Python.</p>
-								</section>
-								<section>
-									<a href="bike_sales.html" >
-									<span class="icon solid major fa-bicycle"></span>
-									<h3 class = "project_hover" >Bike Sales Analysis</h3></a>
-									<p>This analysis showcases customer demographics and attributes, along with their bike purchase behavior.</p>
-								</section>
-								<section>
-									<a href="ecom_sales.html" >
-									<span class="icon solid major fa-desktop"></span>
-									<h3 class = "project_hover" >E-commerce Sales Analysis</h3></a>
-									<p>Examined e-commerce sales data, detected trends, and identified patterns in crucial performance metrics.</p>
-								</section>
-								<section>
-									<a href="roller_eda.html" >
-									<span class="icon solid major fa-link"></span>
-									<h3 class = "project_hover">Roller Coaster EDA</h3></a>
-									<p>Conducted exploratory data analysis on roller coasters, encompassing data preparation, feature relationships, and insights extraction.</p>
-								</section>
-								<section>
-									<a href="diwali_sales.html" >
-									<span class="icon solid major fa-fire"></span>
-									<h3 class = "project_hover" >Diwali Sales Analysis</h3></a>
-									<p>Utilized Python to analyze and pinpoint key customer cohorts driving sales during festive season.</p>
-								</section>
-								<section>
-									<a href="formel_skin.html" >
-									<span class="icon solid major fa-spa"></span>
-									<h3 class = "project_hover" >Formel Skin — Data Analyst Case Study</h3></a>
-									<p>Investigated a €19,500 revenue gap via SQL-based financial reconciliation and built an ops performance dashboard in Looker Studio for a Berlin skincare startup.</p>
-								</section>
-							</div>
-							<!-- <ul class="actions">
-								<li><a href="generic.html" class="button">Learn more</a></li>
-							</ul> -->
 						</div>
 					</section>
 
-					<!-- Four -->
+				<!-- Two — Portfolio -->
+					<section id="two" class="wrapper style3 fade-up">
+						<div class="inner">
+							<h2>Portfolio</h2>
+							<p>A selection of projects spanning data analysis, dashboarding, and case studies. Click a title to explore.</p>
 
+							<!-- Category filter -->
+							<div class="portfolio-filter" id="portfolio-filter">
+								<button class="filter-btn active" data-filter="all">All</button>
+								<button class="filter-btn" data-filter="python">Python</button>
+								<button class="filter-btn" data-filter="sql">SQL</button>
+								<button class="filter-btn" data-filter="excel">Excel</button>
+								<button class="filter-btn" data-filter="tableau">Tableau</button>
+							</div>
+
+							<div class="features">
+								<section data-category="python sql tableau">
+									<a href="instacart.html">
+										<div class="feature-thumb">
+											<img src="images/projects/instacart/Dashboard_Final.webp" alt="Instacart analysis Tableau dashboard" loading="lazy" width="2460" height="1504" />
+										</div>
+										<h3 class="project_hover">Instacart Customer Analysis</h3>
+									</a>
+									<p>Analysed 3.4M grocery orders from 200K Instacart users to uncover buying patterns using SQL, Python, and Tableau.</p>
+									<div class="feature-tags">
+										<span class="tag">Python</span>
+										<span class="tag">SQL</span>
+										<span class="tag">Tableau</span>
+									</div>
+								</section>
+
+								<section data-category="python">
+									<a href="expense.html">
+										<div class="feature-thumb">
+											<img src="images/projects/instacart/August_summary.webp" alt="Expense tracker automated monthly report" loading="lazy" width="2332" height="1378" />
+										</div>
+										<h3 class="project_hover">Expense Tracker</h3>
+									</a>
+									<p>Built an automated expense dashboard that parses bank transaction emails and delivers structured monthly insights via Python.</p>
+									<div class="feature-tags">
+										<span class="tag">Python</span>
+									</div>
+								</section>
+
+								<section data-category="excel">
+									<a href="bike_sales.html">
+										<div class="feature-thumb">
+											<img src="images/projects/bike_sales/Dashboard.webp" alt="Bike sales Excel dashboard with slicers" loading="lazy" width="2018" height="1162" />
+										</div>
+										<h3 class="project_hover">Bike Sales Analysis</h3>
+									</a>
+									<p>Excel dashboard exploring customer demographics — age, income, region — and their influence on bike purchase decisions.</p>
+									<div class="feature-tags">
+										<span class="tag">Excel</span>
+									</div>
+								</section>
+
+								<section data-category="excel">
+									<a href="ecom_sales.html">
+										<div class="feature-thumb">
+											<img src="images/projects/ecom_sales/OC_dashboard.webp" alt="E-commerce order contribution dashboard" loading="lazy" width="1310" height="1260" />
+										</div>
+										<h3 class="project_hover">E-commerce Sales Analysis</h3>
+									</a>
+									<p>Examined e-commerce sales data, detected seasonal trends, and identified patterns in KPIs across categories and payment modes.</p>
+									<div class="feature-tags">
+										<span class="tag">Excel</span>
+									</div>
+								</section>
+
+								<section data-category="python">
+									<a href="roller_eda.html">
+										<div class="feature-thumb">
+											<img src="images/projects/roller_coaster/Feature_Correlation_Matrix.webp" alt="Roller coaster feature correlation heatmap" loading="lazy" width="800" height="550" />
+										</div>
+										<h3 class="project_hover">Roller Coaster EDA</h3>
+									</a>
+									<p>Exploratory data analysis on ~1,200 US roller coasters covering data preparation, feature correlation, and speed distribution patterns.</p>
+									<div class="feature-tags">
+										<span class="tag">Python</span>
+									</div>
+								</section>
+
+								<section data-category="python tableau">
+									<a href="diwali_sales.html">
+										<span class="icon solid major fa-fire"></span>
+										<h3 class="project_hover">Diwali Sales Analysis</h3>
+									</a>
+									<p>Used Python to identify key customer cohorts — by age, gender, geography — driving sales during the Indian festive season.</p>
+									<div class="feature-tags">
+										<span class="tag">Python</span>
+										<span class="tag">Tableau</span>
+									</div>
+								</section>
+
+								<section data-category="sql">
+									<a href="formel_skin.html">
+										<span class="icon solid major fa-spa"></span>
+										<h3 class="project_hover">Formel Skin — Case Study</h3>
+									</a>
+									<p>SQL financial reconciliation uncovering a €19,500 revenue gap and a Looker Studio ops dashboard for a Berlin skincare startup.</p>
+									<div class="feature-tags">
+										<span class="tag">SQL</span>
+										<span class="tag">BigQuery</span>
+										<span class="tag">Looker Studio</span>
+									</div>
+								</section>
+							</div>
+						</div>
+					</section>
+
+				<!-- Four — Resume -->
 					<section id="four" class="wrapper style2 spotlights">
 						<section>
-							<a href="resume.html" class="image"><img src="Projects/Images/resume/resume_blur.jpeg" alt="Resume preview" data-position="center center" /></a>
+							<a href="resume.html" class="image"><img src="images/projects/resume/resume_blur.webp" alt="Resume preview" data-position="center center" loading="lazy" width="1653" height="1918" /></a>
 							<div class="content">
 								<div class="inner">
 									<h2>Resume</h2>
-									<p> Have a look at my resume.</p>
+									<p>Have a look at my resume.</p>
 									<ul class="actions">
 										<li><a href="resume.html" class="button">View</a></li>
-										<li><a href="Projects/Images/resume/Shiv_CV_generic.pdf" target="_blank" class="button">Download</a></li>
+										<li><a href="assets/downloads/Shiv_CV_generic.pdf" target="_blank" class="button">Download</a></li>
 									</ul>
-									
 								</div>
 							</div>
 						</section>
-				</section>
+					</section>
 
-
-				<!-- Three -->
+				<!-- Three — Contact -->
 					<section id="three" class="wrapper style1 fade-up">
 						<div class="inner">
 							<h2>Get in touch</h2>
 							<p>Feel free to reach out for new opportunities, projects, or a friendly chat. Let's connect and engage!</p>
 							<div class="split style1">
 								<section>
-									<!-- Formspree: create a free form at formspree.io and replace YOUR_FORM_ID below -->
 									<form id="contact-form" action="https://formspree.io/f/xjgjzegw" method="POST">
 										<div class="fields">
 											<div class="field half">
@@ -207,7 +295,7 @@
 									<ul class="contact">
 										<li>
 											<h3>Address</h3>
-											<span>Bellandur ##<br />
+											<span>Bellandur<br />
 											Bengaluru, KA 560035<br />
 											India</span>
 										</li>
@@ -222,11 +310,11 @@
 										<li>
 											<h3>Social</h3>
 											<ul class="icons">
-												<li><a href="mailto:shivbhanusingh08@gmail.com" class="icon solid fa-envelope" target="_blank" title = "Mail"><span class="label">LinkedIn</span></a></li>
-												<li><a href="https://www.linkedin.com/in/shiv-bhanu-singh/" class="icon brands fa-linkedin-in" target="_blank" title = "LinkedIn"><span class="label">LinkedIn</span></a></li>
-												<li><a href="https://public.tableau.com/app/profile/shiv.bhanu.singh" class="icon solid fa-chart-bar" target="_blank" title = "Tableau"><span class="label">Tableau</span></a></li>
-												<li><a href="https://github.com/shivbhanu" class="icon brands fa-github" target="_blank" title = "GitHub"><span class="label" >GitHub</span></a></li>
-												<li><a href="https://www.instagram.com/_shivbhanusingh/" class="icon brands fa-instagram" target="_blank" title = "Instagram"><span class="label">Instagram</span></a></li>	
+												<li><a href="mailto:shivbhanusingh08@gmail.com" class="icon solid fa-envelope" target="_blank" title="Mail"><span class="label">Mail</span></a></li>
+												<li><a href="https://www.linkedin.com/in/shiv-bhanu-singh/" class="icon brands fa-linkedin-in" target="_blank" title="LinkedIn"><span class="label">LinkedIn</span></a></li>
+												<li><a href="https://public.tableau.com/app/profile/shiv.bhanu.singh" class="icon solid fa-chart-bar" target="_blank" title="Tableau"><span class="label">Tableau</span></a></li>
+												<li><a href="https://github.com/shivbhanu" class="icon brands fa-github" target="_blank" title="GitHub"><span class="label">GitHub</span></a></li>
+												<li><a href="https://www.instagram.com/_shivbhanusingh/" class="icon brands fa-instagram" target="_blank" title="Instagram"><span class="label">Instagram</span></a></li>
 											</ul>
 										</li>
 									</ul>
@@ -241,58 +329,15 @@
 			<footer id="footer" class="wrapper style1-alt">
 				<div class="inner">
 					<ul class="menu">
-						<li>Copyright &copy; 2023. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>Copyright &copy; 2024. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 					</ul>
 				</div>
 			</footer>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script>
-			// jQuery's event system is used here so that main.js's .submit() trigger
-			// (which bypasses native addEventListener) is intercepted correctly.
-			$(document).ready(function () {
-				$('#contact-form').on('submit', function (e) {
-					e.preventDefault();
-					var form    = this;
-					var $btn    = $('#submit-btn');
-					var $status = $('#form-status');
-
-					$btn.prop('disabled', true).text('Sending…');
-					$status.hide();
-
-					fetch($(form).attr('action'), {
-						method: 'POST',
-						body: new FormData(form),
-						headers: { 'Accept': 'application/json' }
-					})
-					.then(function (res) {
-						if (res.ok) {
-							$status.text('Message sent! I will get back to you soon.').css('color', '#4caf50');
-							form.reset();
-						} else {
-							return res.json().then(function (data) {
-								throw new Error(data.errors
-									? data.errors.map(function (err) { return err.message; }).join(', ')
-									: 'Submission failed.');
-							});
-						}
-					})
-					.catch(function (err) {
-						$status.text('Oops! ' + err.message).css('color', '#e74c3c');
-					})
-					.finally(function () {
-						$btn.prop('disabled', false).text('Send Message');
-						$status.show();
-					});
-				});
-			});
-		</script>
+			<script src="assets/js/contact.js"></script>
+			<script src="assets/js/portfolio.js"></script>
 	</body>
 </html>

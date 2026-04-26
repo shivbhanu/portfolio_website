@@ -9,9 +9,27 @@
 		<title>Diwali Sales Analysis — Shiv Bhanu Singh</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="Python EDA identifying key customer cohorts — by age, gender, geography, and occupation — driving sales during the Indian festive season." />
+
+		<!-- Open Graph -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://shivbhanusingh.com/diwali_sales.html" />
+		<meta property="og:title" content="Diwali Sales Analysis — Shiv Bhanu Singh" />
+		<meta property="og:description" content="Python EDA identifying key customer cohorts — by age, gender, geography, and occupation — driving sales during the Indian festive season." />
+		<meta property="og:image" content="https://shivbhanusingh.com/images/personal/Final_Headshot.JPG" />
+
 		<link rel="icon" href="images/S_Title.jpeg" type="image/x-icon"/>
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<!-- Google Analytics 4: replace G-XXXXXXXXXX with your Measurement ID from analytics.google.com -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-XXXXXXXXXX');
+		</script>
 	</head>
 	<body class="is-preload">
 
@@ -20,11 +38,11 @@
 				<a href="index.html#two" class="title">Shiv Bhanu Singh</a>
 				<nav>
 					<ul>
-						<li><a href="index.html" class = "Active" >Home</a></li>
-						<li><a href="index.html#one" class = "Active" >About Me</a></li>
-						<li><a href="index.html#two" class = "Active" >Portfolio</a></li>
-						<li><a href="index.html#four" class = "Active" >Resume</a></li>
-						<li><a href="index.html#three" class = "Active" >Get in Touch</a></li>
+						<li><a href="index.html" class="Active">Home</a></li>
+						<li><a href="index.html#one" class="Active">About Me</a></li>
+						<li><a href="index.html#two" class="Active">Portfolio</a></li>
+						<li><a href="index.html#four" class="Active">Resume</a></li>
+						<li><a href="index.html#three" class="Active">Get in Touch</a></li>
 					</ul>
 				</nav>
 			</header>
@@ -34,69 +52,47 @@
 
 				<!-- Main -->
 					<section id="main" class="wrapper">
-						
-						<div class="inner" >
-							
+						<div class="inner">
 							<h1 class="major">Diwali Sales Analysis</h1>
-						
+
 							<main>
 								<ul class="actions">
 									<li><a href="https://github.com/shivbhanu/Data_Analyst-Portfolio_Project/tree/main/Python_Projects/001-eda-diwali-sales" target="_blank" class="button scrolly">View Github Repo</a></li>
 									<li><a href="https://public.tableau.com/app/profile/shiv.bhanu.singh/viz/DiwaliSalesAnalysis_16927258023040/Dashboard1?publish=yes" target="_blank" class="button scrolly">View Tableau Viz</a></li>
 								</ul>
-							<h2 >Objective</h2>
-							<p>To analysze what customers buy and what kind of customers buy what product during festive season.</p>
-							
-							<h2>Dataset Summary</h2>
-							
-								<p>The provided dataset contains information about customers, their demographics, product details, and purchase behavior.
-								</p>
-							
-							<h2>Process</h2>
-							<p>
-								Exploratory data analysis was performed using Python but plotting charts at multiple cuts. 
-							</p>
-							<h2>Key Insights</h2>
-							<ul>
-								<li>Most of the buyers are female and amount purchased is also higher for females</li>
-								<li>Age group 26-35 spend most on the platform, followed by 36-45 groupd.</li>
-								<li>Uttar Pradesh, Maharashtra and Karnataka were top 3 selling states.</li>
-								<li>Married women age group 26-35 yrs from UP, Maharastra and Karnataka working in IT, Healthcare and Aviation are more likely to buy products from Food, Clothing and Electronics category.</li>
-								
-							</ul>
-						</main>
-						<p>Python working can be found in github repo.</p>
-						<!-- <h2>Graphs</h2>
-						<div style="display: flex;"> 
-							<div class="image fit" style="margin-right: 10px; ">
-								<a href="Projects/Images/Bike_Sales/AgevsSales.png" target="_blank">
-									<img src="Projects/Images/Bike_Sales/AgevsSales.png" alt=""/>
-								</a>	
-								<p style="text-align: center; margin: 10px;">
-									<strong>Age vs Purchase</strong>
-								</p>
-							</div> 	
-							<div class="image fit" style="margin-left: 10px; " >
-								<a href="Projects/Images/Bike_Sales/EduvsSales.png" target="_blank">
-									<img src="Projects/Images/Bike_Sales/EduvsSales.png" alt="" />
-								</a>
-								<p style="text-align: center; margin: 10px;">
-									<strong>Education Level vs Purchase</strong>
-								</p>
-							</div> 	
+
+								<h2>Objective</h2>
+								<p>Identify what customers buy and which customer segments are most active during the Indian festive season.</p>
+
+								<h2>Dataset Summary</h2>
+								<p>The dataset contains customer information including demographics, product details, and purchase behaviour during Diwali.</p>
+
+								<h2>Process</h2>
+								<p>Exploratory data analysis was performed using Python with charts plotted at multiple demographic cuts to surface the key buyer cohorts.</p>
+
+								<h2>Key Insights</h2>
+								<ul>
+									<li>Most buyers are female, and the total amount purchased is also higher for females.</li>
+									<li>The 26–35 age group spends most on the platform, followed by the 36–45 group.</li>
+									<li>Uttar Pradesh, Maharashtra, and Karnataka are the top three selling states.</li>
+									<li>Married women aged 26–35 from UP, Maharashtra, and Karnataka working in IT, Healthcare, and Aviation are most likely to buy Food, Clothing, and Electronics.</li>
+								</ul>
+							</main>
+
+							<h3 style="text-align: center;"><strong>Tableau Viz</strong></h3>
+							<div class='tableauPlaceholder' id='viz1692725871339' style='position: relative'><noscript><a href='#'><img alt='Diwali Sales Analysis' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;XZ&#47;XZ6Y34426&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;XZ6Y34426' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;XZ&#47;XZ6Y34426&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>
+							<script type='text/javascript'>
+								var divElement = document.getElementById('viz1692725871339');
+								var vizElement = divElement.getElementsByTagName('object')[0];
+								if (divElement.offsetWidth > 800) { vizElement.style.width='100%'; vizElement.style.height=(divElement.offsetWidth*0.75)+'px'; }
+								else if (divElement.offsetWidth > 500) { vizElement.style.width='100%'; vizElement.style.height=(divElement.offsetWidth*0.75)+'px'; }
+								else { vizElement.style.width='100%'; vizElement.style.height='1277px'; }
+								var scriptElement = document.createElement('script');
+								scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+								vizElement.parentNode.insertBefore(scriptElement, vizElement);
+							</script>
+
 						</div>
-							<hr style="margin-top: 2px ;"> -->
-							<span >
-								<h3 style="text-align: center;">
-									<strong>Tableau Viz</strong>
-								</h3>
-							</span> 	
-							<!-- <span class="image fit"><a href="Projects/Images/Bike_Sales/Dashboard.png" target="_blank"><img src="Projects/Images/Bike_Sales/Dashboard.png" alt="" /></a></span> 	 -->
-							<div class='tableauPlaceholder' id='viz1692725871339' style='position: relative'><noscript><a href='#'><img alt='Diwali Sales Analysis ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;XZ&#47;XZ6Y34426&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;XZ6Y34426' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;XZ&#47;XZ6Y34426&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1692725871339');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='1277px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-					</div>
-							
-						
-					
 					</section>
 
 			</div>
@@ -105,24 +101,18 @@
 			<footer id="footer" class="wrapper alt">
 				<div class="inner" style="align-items: center; justify-content: center;">
 					<ul class="menu">
-						<li>&copy; 2023 Shiv Bhanu Singh</li>
-						<li><a href="mailto:shivbhanusingh08@gmail.com" class="icon solid fa-envelope" target="_blank" title = "Mail"><span class="label">LinkedIn</span></a></li>
-						<li><a href="https://www.linkedin.com/in/shiv-bhanu-singh/" class="icon brands fa-linkedin-in" target="_blank" title = "LinkedIn"><span class="label">LinkedIn</span></a></li>
-						<li><a href="https://public.tableau.com/app/profile/shiv.bhanu.singh" class="icon solid fa-chart-bar" target="_blank" title = "Tableau"><span class="label">Tableau</span></a></li>
-						<li><a href="https://github.com/shivbhanu" class="icon brands fa-github" target="_blank" title = "GitHub"><span class="label" >GitHub</span></a></li>
-						<li><a href="https://www.instagram.com/_shivbhanusingh/" class="icon brands fa-instagram" target="_blank" title = "Instagram"><span class="label">Instagram</span></a></li>	
-						
+						<li>&copy; 2024 Shiv Bhanu Singh</li>
+						<li><a href="mailto:shivbhanusingh08@gmail.com" class="icon solid fa-envelope" target="_blank" title="Mail"><span class="label">Mail</span></a></li>
+						<li><a href="https://www.linkedin.com/in/shiv-bhanu-singh/" class="icon brands fa-linkedin-in" target="_blank" title="LinkedIn"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://public.tableau.com/app/profile/shiv.bhanu.singh" class="icon solid fa-chart-bar" target="_blank" title="Tableau"><span class="label">Tableau</span></a></li>
+						<li><a href="https://github.com/shivbhanu" class="icon brands fa-github" target="_blank" title="GitHub"><span class="label">GitHub</span></a></li>
+						<li><a href="https://www.instagram.com/_shivbhanusingh/" class="icon brands fa-instagram" target="_blank" title="Instagram"><span class="label">Instagram</span></a></li>
 					</ul>
 				</div>
 			</footer>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
 	</body>
