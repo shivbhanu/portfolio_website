@@ -38,6 +38,10 @@ Built using the [Hyperspace](https://html5up.net/hyperspace) template from HTML5
 - **SASS** — Stylesheet preprocessing
 - **GitHub Pages** — Hosting (custom domain via CNAME)
 
+## Contact Form
+
+The contact form uses [Formspree](https://formspree.io/) (free, no backend required). Submissions are delivered directly to the inbox.
+
 ## Local Development
 
 No build step required — open `index.html` directly in a browser, or serve it locally:
