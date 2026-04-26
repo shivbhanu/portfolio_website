@@ -68,7 +68,7 @@
 
 								<hr />
 
-								<h2>Task 1 — Financial Reconciliation</h2>
+								<h2>Task 1 - Financial Reconciliation</h2>
 
 								<h3>Objective</h3>
 								<p>Investigate discrepancies between Formel Skin's backend order system and its invoicing system, quantify the revenue gap, and build an automated reconciliation model to prevent future drift.</p>
@@ -78,7 +78,7 @@
 
 								<h3>Key Findings</h3>
 								<ul>
-									<li>Identified a total gap of <strong>€19,500</strong> — approximately <strong>0.9% of net revenue</strong> — across five distinct discrepancy categories.</li>
+									<li>Identified a total gap of <strong>€19,500</strong> - approximately <strong>0.9% of net revenue</strong> - across five distinct discrepancy categories.</li>
 									<li><strong>Orphan refunds</strong> accounted for 72% of the gap: refunds processed in the invoicing system with no matching order.</li>
 									<li><strong>Currency mismatches</strong> (16%): orders recorded in non-EUR currencies without FX conversion in the invoice system.</li>
 									<li><strong>Missing invoices</strong> (5%): fulfilled orders with no corresponding invoice record.</li>
@@ -87,7 +87,7 @@
 
 								<hr />
 
-								<h2>Task 2 — Operations Performance Dashboard</h2>
+								<h2>Task 2 - Operations Performance Dashboard</h2>
 
 								<h3>Objective</h3>
 								<p>Design a metrics framework and Looker Studio dashboard to give the operations team visibility into case resolution performance and identify bottlenecks in the consultation workflow.</p>
@@ -96,11 +96,11 @@
 								<p>Defined a metrics tree anchored on a single North Star KPI. Modelled consultation, order, and customer data through staging and intermediate SQL layers to produce an analysis-ready mart, then built the Looker Studio dashboard on top of it.</p>
 
 								<h3>North Star KPI</h3>
-								<p><strong>On-time case resolution rate</strong> — the share of consultations resolved within the target SLA window.</p>
+								<p><strong>On-time case resolution rate</strong> - the share of consultations resolved within the target SLA window.</p>
 
 								<h3>Key Findings</h3>
 								<ul>
-									<li>Median resolution time is <strong>12.8 hours</strong>, but the <strong>P90 reaches 134 hours</strong> — indicating a long tail of severely delayed cases.</li>
+									<li>Median resolution time is <strong>12.8 hours</strong>, but the <strong>P90 reaches 134 hours</strong> - indicating a long tail of severely delayed cases.</li>
 									<li><strong>27.4% of consultations</strong> are stuck in a pending state due to unresolved payment issues upstream.</li>
 									<li><strong>5% of orders</strong> generate three or more consultations, signalling recurring issues addressable with proactive intervention.</li>
 									<li>Dashboard built in Looker Studio to give ops managers a live view of resolution rates, queue depth by agent, and payment-blocked consultation counts.</li>
@@ -111,9 +111,9 @@
 								<h2>SQL Architecture</h2>
 								<p>Queries are organised in a three-layer dbt-style structure:</p>
 								<ul>
-									<li><strong>Staging</strong> — column renaming, type casting, surrogate key generation for orders, invoices, consultations, and customers.</li>
-									<li><strong>Intermediate</strong> — business logic, EUR FX normalisation, and discrepancy flagging.</li>
-									<li><strong>Mart</strong> — analysis-ready tables powering the reconciliation report and the ops KPI dashboard.</li>
+									<li><strong>Staging</strong> - column renaming, type casting, surrogate key generation for orders, invoices, consultations, and customers.</li>
+									<li><strong>Intermediate</strong> - business logic, EUR FX normalisation, and discrepancy flagging.</li>
+									<li><strong>Mart</strong> - analysis-ready tables powering the reconciliation report and the ops KPI dashboard.</li>
 								</ul>
 
 							</main>
