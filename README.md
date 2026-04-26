@@ -38,6 +38,20 @@ Built using the [Hyperspace](https://html5up.net/hyperspace) template from HTML5
 - **SASS** — Stylesheet preprocessing
 - **GitHub Pages** — Hosting (custom domain via CNAME)
 
+## Contact Form Setup
+
+The contact form uses [Formspree](https://formspree.io/) (free, no backend required). To activate it:
+
+1. Sign up at [formspree.io](https://formspree.io/) using `shivbhanusingh08@gmail.com`
+2. Create a new form — Formspree gives you a form ID (e.g. `xpzvwkrd`)
+3. In `index.html`, replace `YOUR_FORM_ID` in the form `action` URL with your actual ID
+
+```html
+<form action="https://formspree.io/f/YOUR_FORM_ID" ...>
+```
+
+Submissions will land directly in your inbox.
+
 ## Local Development
 
 No build step required — open `index.html` directly in a browser, or serve it locally:
